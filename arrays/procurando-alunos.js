@@ -6,12 +6,17 @@ const lista = [nomes, notas]
 function exibeNomeENota(nome,nota) {
     if (lista[0].includes(nome)) {
 
-        const indice = lista[0].indexOf(nome)
-        const mediaDoAluno = lista[1][indice]
+      //  const alunos = lista[0]
+      //  const medias = lista[1]
 
-        console.log(`O aluno ${nome} esta cadastrado! e sua media é ${mediaDoAluno}`)
+      const [alunos,medias] = lista // isso é a mesma coisa que a linha 10 e 9
+
+        const indice = alunos.indexOf(nome)
+        const mediaDoAluno = medias[indice]
+
+        console.log(`${nome} está com a media ${mediaDoAluno}`)
     } else {
-        console.log(`O aluno ${nome} não esta cadastrado`)
+        console.log(`${nome} não esta cadastrado`)
     }
 }
 
